@@ -328,23 +328,10 @@ class TransactionListClass(Resource):
         #     return output
         
 
-# class TransactionListClassCSV(Resource):
-#     def post(self):
+class TransactionListClassCSV(Resource):
+    def post(self):
+	return "HELLO World"
 
-#       print(request)
-
-#       f = request.files['file[]']
-#       # f.save(secure_filename(f.filename))
-#       return 'file uploaded successfully'
-      
-#       data = {}
-#       for rows in fileCSV:
-#         id = rows['id']
-#         data[id] = rows
-      
-#       return data
-
-#       return fileCSV
 
       
 class TransactionSearch(Resource):
@@ -446,7 +433,7 @@ class ModelPrediction(Resource):
 
         return predictions.tolist()
 
-# api.add_resource(TransactionListClassCSV, '/transactionlist/csv')
+api.add_resource(TransactionListClassCSV, '/transactionlist/csv')
 
 
 #Web Services
