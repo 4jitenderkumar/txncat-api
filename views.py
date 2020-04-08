@@ -126,7 +126,7 @@ def getTEST(query):
         return "NOT FOUND"    
 
     results = []
-    count = 3
+    count = 5
 
     original = ""
 
@@ -334,48 +334,13 @@ class TransactionListClassCSV(Resource):
 	
       
 class TransactionSearch(Resource):
-    def post(self, name):
-      
-      #TEST
+    def post(self):
+      output = []
+      request_data = request.get_json()
+      for i in request_data:
+        output.append({i['txn'] : getTEST(i['txn'])})	
 
-      # return(getTEST(name))
-
-
-      #END TEST
-      
-      # if name is "":
-      #   return {'message': "Blank"}, 400
-
-      # # Check if already exists
-      # checkExists = mongo.db.Trans.find_one()
-      # checkExists2 = checkExists.get("search")
-      # checkExists3 = []
-
-      # for i in checkExists2:
-      #   if list(i.keys())[0] == name:
-      #     return i   
-
-      count = 0
-      filename = pd.read_csv(SEARCH_FILE)
-
-      for i in range(len(filename)):
-        # print(filename['description'][i]) 
-        if count%1000 == 0:
-          print(count)
-
-        output = getTEST(filename['description'][i])
-
-        # Insert data
-        data = {
-          "search" : {filename['description'][i] : output}
-          
-        }
-
-        mongo.db.Trans.update_one({"_id":"1"}, {"$push": data})
-        count = count + 1
-      # return data
-     
-      # return {'message': "Successfully Updated"}
+      return output	
 
 class TransactionSearchList(Resource):
     def post(self):
@@ -438,7 +403,7 @@ api.add_resource(TransactionListClassCSV, '/transactionlist/csv')
 #Web Services
 api.add_resource(TransactionListClass, '/transactionlist')  
 
-api.add_resource(TransactionSearch, '/transactionsearch/<string:name>')
+api.add_resource(TransactionSearch, '/transactionsearch')
 api.add_resource(TransactionSearchList, '/transactionsearchlist')
 # api.add_resource(TransactionCategorisation, '/transactioncategorisation')
 api.add_resource(ModelPrediction, '/modelPrediction')
