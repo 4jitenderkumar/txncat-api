@@ -9,13 +9,12 @@ import json
 import csv
 import re
 #Web Scrapper
-import wikipedia
 import numpy as np
-import fire
+# import fire
 import json
-import codecs
+# import codecs
 import pandas as pd
-from string import punctuation
+# from string import punctuation
 from bs4 import BeautifulSoup
 # from nltk.corpus import stopwords
 # import nltk
@@ -23,7 +22,7 @@ from bs4 import BeautifulSoup
 from pyquery import PyQuery as pq
 import requests
 import logging 
-from socket import timeout
+# from socket import timeout
 from urllib.error import HTTPError, URLError
 # from gensim.parsing.preprocessing import remove_stopwords
 # from werkzeug import secure_filename
