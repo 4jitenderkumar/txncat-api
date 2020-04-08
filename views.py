@@ -26,8 +26,8 @@ import requests
 import logging 
 # from socket import timeout
 from urllib.error import HTTPError, URLError
-import pickle
-import sklearn
+# import pickle
+# import sklearn
 
 from config import *
 
