@@ -332,9 +332,9 @@ class TransactionListClassCSV(Resource):
     def get(self):
     	return "GDCA TxnCAT"
 
-class RJ(Resource):
+class GHUTNA(Resource):
     def get(self):
-    	return "RIUUUUUUUUUUUUUUUUUUUUUU JITUUUUUUUUUUUUUUUUUUUUUUUUUU"
+    	return "TEAM IS BEST.................................................TAMANA GHUTNA is SO SO SO SO BAD"
 	
       
 class TransactionSearch(Resource):
@@ -402,7 +402,7 @@ class ModelPrediction(Resource):
         return predictions.tolist()
 
 api.add_resource(TransactionListClassCSV, '/transactionlist/csv')
-api.add_resource(RJ, '/RandJ')
+api.add_resource(GHUTNA, '/ghutne')
 
 #Web Services
 api.add_resource(TransactionListClass, '/transactionlist')  
