@@ -5,3 +5,10 @@ uwsgi
 pymongo
 numpy
 pyquery
+wikipedia
+fire
+pandas
+bs4
+string
+socket
+urllib.error
