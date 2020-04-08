@@ -1,4 +1,4 @@
-from WebService_V1 import  app, api, mongo
+from app import app, api, mongo
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from flask_pymongo import PyMongo
