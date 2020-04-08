@@ -330,7 +330,7 @@ class TransactionListClass(Resource):
 
 class TransactionListClassCSV(Resource):
     def get(self):
-    	return "HELLO SUMIT SHARMA"
+    	return "GDCA TxnCAT"
 	
       
 class TransactionSearch(Resource):
