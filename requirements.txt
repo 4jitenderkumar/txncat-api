@@ -9,4 +9,3 @@ wikipedia
 fire
 pandas
 bs4
-urllib.error
