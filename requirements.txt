@@ -9,6 +9,5 @@ wikipedia
 fire
 pandas
 bs4
-string
 socket
 urllib.error
