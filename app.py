@@ -41,7 +41,7 @@ app.config["MONGO_URI"] = DATABASE_URI
 mongo = PyMongo(app)
 
 # from views import * 
-from views2 import * 
+from views1 import * 
 
 
 
