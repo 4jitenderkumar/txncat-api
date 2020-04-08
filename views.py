@@ -329,10 +329,9 @@ class TransactionListClass(Resource):
         
 
 class TransactionListClassCSV(Resource):
-    def post(self):
-    	return "HELLO World"
-
-
+    def get(self):
+    	return "HELLO SUMIT SHARMA"
+	
       
 class TransactionSearch(Resource):
     def post(self, name):
