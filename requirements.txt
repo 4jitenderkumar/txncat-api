@@ -3,7 +3,5 @@ Flask-RESTful
 flask_pymongo
 uwsgi
 pymongo
-bson.objectid
-wikipedia
 numpy
 pyquery
