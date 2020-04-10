@@ -332,19 +332,11 @@ class TransactionListClassCSV(Resource):
     def get(self):
     	return "GDCA TxnCAT"
 
-class GHUTNA(Resource):
-    def get(self):
-    	return "TEAM IS BEST.................................................TAMANA GHUTNA is SO SO SO SO BAD"
 	
       
 class TransactionSearch(Resource):
-    def post(self):
-      output = []
-      request_data = request.get_json()
-      for i in request_data:
-        output.append({i['txn'] : getTEST(i['txn'])})	
-
-      return output	
+    def post(self, txn):
+      return getTEST(txn)
 
 class TransactionSearchList(Resource):
     def post(self):
@@ -360,7 +352,7 @@ class TransactionSearchList(Resource):
       return output
       
 # class TransactionCategorisation(Resource):
-#     def post(self):
+#     def post(s
       
 
 
@@ -402,12 +394,11 @@ class ModelPrediction(Resource):
         return predictions.tolist()
 
 api.add_resource(TransactionListClassCSV, '/transactionlist/csv')
-api.add_resource(GHUTNA, '/ghutne')
 
 #Web Services
 api.add_resource(TransactionListClass, '/transactionlist')  
 
-api.add_resource(TransactionSearch, '/transactionsearch')
+api.add_resource(TransactionSearch, '/transactionsearch/<string:txn>')
 api.add_resource(TransactionSearchList, '/transactionsearchlist')
 # api.add_resource(TransactionCategorisation, '/transactioncategorisation')
 api.add_resource(ModelPrediction, '/modelPrediction')
