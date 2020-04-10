@@ -335,7 +335,7 @@ class TransactionListClassCSV(Resource):
 	
       
 class TransactionSearch(Resource):
-    def post(self, txn):
+    def get(self, txn):
       return getTEST(txn)
 
 class TransactionSearchList(Resource):
